@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3</title>
+</head>
+<body>
+  <p id="mensaje">Texto original</p>
+  <button id="btn">Cambiar texto</button>
+
+  <script>
+    // TODO: Obtén una referencia al botón con id "btn"
+    const boton = document.getElementById("btn");
+
+    // TODO: Obtén una referencia al párrafo con id "mensaje"
+    const parrafo = document.getElementById("mensaje");
+
+    // TODO: Agrega un event listener al botón que al hacer clic
+    // cambie el textContent del párrafo a "¡Hola, mundo!"
+    boton.addEventListener("click", () => {
+      parrafo.textContent = "¡Hola, mundo!";
+    });
+  </script>
+</body>
+</html>
