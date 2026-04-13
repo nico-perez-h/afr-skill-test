@@ -3,13 +3,13 @@
 
 async function obtenerUsuario() {
   // TODO: Usa fetch para obtener los datos del usuario con id 1
-  const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+  const response = await /* tu código aquí */;
 
   // TODO: Convierte la respuesta a JSON
-  const data = await response.json();
+  const data = await /* tu código aquí */;
 
   // TODO: Imprime en consola: "Usuario: " seguido del nombre del usuario
-  console.log("Usuario: " + data.name);
+  /* tu código aquí */
 }
 
 obtenerUsuario();
