@@ -1,18 +1,20 @@
--- TODO 1: Crea una tabla "productos" con las columnas:
---   id      → entero, clave primaria, autoincremental
---   nombre  → texto máximo 100 caracteres, no nulo
---   precio  → numérico con 2 decimales, no nulo
---   stock   → entero, valor por defecto 0
-/* tu código aquí */
+-- TODO 1: Crear tabla
+CREATE TABLE productos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50),
+    precio NUMERIC
+);
 
+-- TODO 2: Insertar datos
+INSERT INTO productos (nombre, precio) VALUES
+('Laptop', 1500),
+('Mouse', 50),
+('Teclado', 80),
+('Monitor', 300),
+('USB', 20);
 
--- TODO 2: Inserta estos tres registros:
---   ('Laptop',  999.99, 10)
---   ('Mouse',    25.50, 50)
---   ('Teclado',  45.00, 30)
-/* tu código aquí */
-
-
--- TODO 3: Consulta nombre, precio y stock de los productos
---   con stock > 20, ordenados por precio ASC
-/* tu código aquí */
+-- TODO 3: Consulta con filtro
+SELECT nombre, precio
+FROM productos
+WHERE precio > 100
+ORDER BY precio DESC;
