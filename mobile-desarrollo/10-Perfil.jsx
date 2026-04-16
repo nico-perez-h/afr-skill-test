@@ -6,6 +6,14 @@ export default function Perfil() {
   const [cargando, setCargando] = useState(true);
 
   useEffect(() => {
+    const obtenerUsuario = async () => {
+      const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+      const data = await response.json();
+      setUsuario(data);
+      setCargando(false);
+    };
+
+    obtenerUsuario();
     // TODO: Usa fetch para obtener los datos de:
     // https://jsonplaceholder.typicode.com/users/1
     // Guarda el resultado en "usuario" con setUsuario
