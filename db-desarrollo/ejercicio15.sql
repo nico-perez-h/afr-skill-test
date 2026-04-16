@@ -11,5 +11,12 @@
 -- TODO: Escribe una consulta que retorne nombre y salario
 -- de empleados que ganan MÁS que el promedio salarial
 -- de su propio departamento.
--- Ordena por salario de forma descendente.
-/* tu código aquí */
+-- Ordena por salario de forma descendente.SELECT nombre, salario
+
+FROM empleados e
+WHERE salario > (
+    SELECT AVG(salario)
+    FROM empleados
+    WHERE departamento = e.departamento
+)
+ORDER BY salario DESC;
